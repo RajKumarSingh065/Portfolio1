@@ -11,8 +11,8 @@ const container = (delay) => ({
 });
 
 export default function Hero() {
-  return (<section id="home" className="py-5">
-    <div  className="border-b border-neutral-900 lg:mb-35 pb-4">
+  return (<section id="home" className="h-screen flex items-center justify-center">
+    <div className="border-b border-neutral-900 pb-4 w-full">
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
@@ -35,7 +35,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible" 
             className="my-2 max-w-lg tracking-tighter py-6 font-light">
-              I specialize in building robust and scalable web solutions using the latest technologies. With a particular emphasis on React, Node.js, and MongoDB, I strive to deliver high-quality code that not only meets the requirements but also ensures exceptional user experiences. My expertise spans across both front-end and back-end development, allowing me to manage and integrate all aspects of a web application seamlessly.
+              I specialize in building secure, robust, and scalable web solutions with a strong foundation in cybersecurity principles. Leveraging technologies like React, Node.js, and MongoDB, I not only develop end-to-end applications but also ensure they are resilient against modern threats. My skill set spans full-stack development and secure coding practices, allowing me to design systems that prioritize data integrity, access control, and threat mitigation from the ground up. With a focus on both functionality and security, I aim to deliver high-quality code that meets performance benchmarks while adhering to best practices in cybersecurity.
             </motion.p>
           </div>
         </div>

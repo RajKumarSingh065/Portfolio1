@@ -17,4 +17,11 @@ function Page({ title, content }) {
   );
 }
 
+import PropTypes from "prop-types";
+
+Page.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+};
+
 export default Page;

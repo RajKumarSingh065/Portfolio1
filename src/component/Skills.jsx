@@ -13,55 +13,54 @@ const iconvariants = (duration) => ({
 
 export default function Skills(){
     return(
-        <section id="skills"  className="py-5">
-        <div id="skills" className="border-b border-neutral-800 pb-24">
+        <section id="skills" className="h-screen flex items-center justify-center">
+        <div className="w-full h-full flex flex-col justify-center">
             <motion.h1 
             whileInView={{opacity:1, y:0}}
             initial={{opacity:0, y:-100}}
-            transition={{duration:1.5}} className="my-20 text-center text-4xl">Skills</motion.h1>
+            transition={{duration:1.5}} className="mb-16 text-center text-4xl">Skills</motion.h1>
             <motion.div
             whileInView={{opacity:1, x:0}}
             initial={{opacity:0, x:-100}}
             transition={{duration:1.5}}
-             className="flex flex-wrap item-center justify-center gap-6">
+             className="flex flex-wrap items-center justify-center gap-8 px-4">
                 <motion.div 
                 variants={iconvariants(2.5)}
                 animate="animate"
                 initial="initial"
-                className="rounded-2xl border-neutral-800 border-4 p-4">
-                    <FaJava className="text-4xl text-white" />
+                className="rounded-2xl border-neutral-800 border-4 p-6">
+                    <FaJava className="text-6xl text-white" />
                 </motion.div>
                 <motion.div variants={iconvariants(3)}
                 animate="animate"
                 initial="initial"
-                 className="rounded-2xl border-neutral-800 border-4 p-4">
-                    <SiHtml5 className="text-4xl text-red-500 bg-white" /></motion.div>
+                 className="rounded-2xl border-neutral-800 border-4 p-6">
+                    <SiHtml5 className="text-6xl text-red-500 bg-white" /></motion.div>
                 <motion.div variants={iconvariants(3.9)}
                 animate="animate"
                 initial="initial"
-                 className="rounded-2xl border-neutral-800 border-4 p-4">
-                    <SiJavascript className="text-4xl text-yellow-300" />
+                 className="rounded-2xl border-neutral-800 border-4 p-6">
+                    <SiJavascript className="text-6xl text-yellow-300" />
                 </motion.div>
                 <motion.div
                 variants={iconvariants(7)}
                 animate="animate"
-                initial="initial" className="rounded-2xl border-neutral-800 border-4 p-4">
-                    <RiTailwindCssFill className="text-4xl text-blue-600" />
+                initial="initial" className="rounded-2xl border-neutral-800 border-4 p-6">
+                    <RiTailwindCssFill className="text-6xl text-blue-600" />
                 </motion.div>
                 <motion.div
                 variants={iconvariants(5)}
                 animate="animate"
-                initial="initial" className="rounded-2xl border-neutral-800 border-4 p-4">
-                    <RiReactjsFill className="text-4xl text-cyan-500" />
+                initial="initial" className="rounded-2xl border-neutral-800 border-4 p-6">
+                    <RiReactjsFill className="text-6xl text-cyan-500" />
                 </motion.div>
                 <motion.div 
                 variants={iconvariants(3)}
                 animate="animate"
-                initial="initial" className="rounded-2xl border-neutral-800 border-4 p-4">
-                    <FaNodeJs className="text-4xl text-green-500" />
+                initial="initial" className="rounded-2xl border-neutral-800 border-4 p-6">
+                    <FaNodeJs className="text-6xl text-green-500" />
                 </motion.div>
-            </motion.div>
-
+                </motion.div>
         </div>
     </section>);
 }
