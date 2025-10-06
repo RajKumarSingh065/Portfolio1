@@ -20,8 +20,8 @@ export default function About() {
 
                     {/* Text column */}
                     <div className="lg:col-span-7">
-                        <div className="space-y-6 text-neutral-300">
-                            <p className="text-lg leading-relaxed">
+                        <div className="space-y-6 text-neutral-300 ">
+                            <p className="text-lg leading-relaxed ">
                                 I’m a cybersecurity-focused full-stack developer with a passion for building secure, scalable, and high-performance web applications. My work bridges the gap between software engineering and cybersecurity, ensuring every project I build is hardened against modern threats from the ground up.
                             </p>
                             <p className="text-lg leading-relaxed">

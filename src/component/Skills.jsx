@@ -28,36 +28,36 @@ export default function Skills(){
                 variants={iconvariants(2.5)}
                 animate="animate"
                 initial="initial"
-                className="rounded-2xl border-neutral-800 border-4 p-6">
-                    <FaJava className="text-6xl text-white" />
+                className="rounded-2xl border-4 p-6 border-neutral-300 dark:border-neutral-800 bg-neutral-100 dark:bg-transparent">
+                    <FaJava className="text-6xl text-neutral-800 dark:text-white" />
                 </motion.div>
                 <motion.div variants={iconvariants(3)}
                 animate="animate"
                 initial="initial"
-                 className="rounded-2xl border-neutral-800 border-4 p-6">
+                 className="rounded-2xl border-4 p-6 border-neutral-300 dark:border-neutral-800 bg-neutral-100 dark:bg-transparent">
                     <SiHtml5 className="text-6xl text-red-500 bg-white" /></motion.div>
                 <motion.div variants={iconvariants(3.9)}
                 animate="animate"
                 initial="initial"
-                 className="rounded-2xl border-neutral-800 border-4 p-6">
+                 className="rounded-2xl border-4 p-6 border-neutral-300 dark:border-neutral-800 bg-neutral-100 dark:bg-transparent">
                     <SiJavascript className="text-6xl text-yellow-300" />
                 </motion.div>
                 <motion.div
                 variants={iconvariants(7)}
                 animate="animate"
-                initial="initial" className="rounded-2xl border-neutral-800 border-4 p-6">
+                initial="initial" className="rounded-2xl border-4 p-6 border-neutral-300 dark:border-neutral-800 bg-neutral-100 dark:bg-transparent">
                     <RiTailwindCssFill className="text-6xl text-blue-600" />
                 </motion.div>
                 <motion.div
                 variants={iconvariants(5)}
                 animate="animate"
-                initial="initial" className="rounded-2xl border-neutral-800 border-4 p-6">
+                initial="initial" className="rounded-2xl border-4 p-6 border-neutral-300 dark:border-neutral-800 bg-neutral-100 dark:bg-transparent">
                     <RiReactjsFill className="text-6xl text-cyan-500" />
                 </motion.div>
                 <motion.div 
                 variants={iconvariants(3)}
                 animate="animate"
-                initial="initial" className="rounded-2xl border-neutral-800 border-4 p-6">
+                initial="initial" className="rounded-2xl border-4 p-6 border-neutral-300 dark:border-neutral-800 bg-neutral-100 dark:bg-transparent">
                     <FaNodeJs className="text-6xl text-green-500" />
                 </motion.div>
                 </motion.div>

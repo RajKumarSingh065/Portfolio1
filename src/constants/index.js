@@ -57,4 +57,13 @@ export const PROJECTS = [
     }
 ];
 
+// Social usernames/config used by SocialProof and Contact sections
+// Social usernames/config used by SocialProof
+export const SOCIAL = {
+    github: "RajKumarSingh065",
+    leetcode: "rajkumar_01",
+    hackerrank: "29rajkumarsingh",
+    tryhackme: "Dark.Knight065",
+};
+
 

@@ -41,8 +41,20 @@ export default function NavBar() {
           >
             PROJECTS
           </a>
+          <a
+            href="#social"
+            className="rounded-md px-4 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
+          >
+            SOCIAL
+          </a>
+          <a
+            href="#contact"
+            className="rounded-md px-4 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
+          >
+            CONTACT
+          </a>
         </nav>
-        <div className="flex space-x-4 text-xl">
+        <div className="flex items-center space-x-4 text-xl">
           <a
             href="https://www.linkedin.com/in/rajkumarsingh-in/"
             target="_blank"

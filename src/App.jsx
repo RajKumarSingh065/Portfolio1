@@ -6,6 +6,7 @@ import Skills from './component/Skills';
 import Project from './component/Project';
 import Contact from './component/Contact';
 import Hero from './component/Hero';
+import SocialProof from './component/SocialProof';
 import './index.css';
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
         <About />
         <Skills />
         <Project />
+  <SocialProof />
         <Contact />
       </div>       
     </div>
