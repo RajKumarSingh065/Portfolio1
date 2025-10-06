@@ -21,4 +21,12 @@ section {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
+        scroll-behavior: smooth;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html, body, .snap-container {
+        scroll-behavior: auto;
+    }
 }

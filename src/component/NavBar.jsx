@@ -1,5 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
+import logo from "../assets/reshot-icon-gazelle.svg";
 
 export default function NavBar() {
   return (
@@ -9,8 +10,8 @@ export default function NavBar() {
           <img
             width="60"
             height="60"
-            src="src\assets\v2--45-.png"
-            alt="r--v2"
+            src={logo}
+            alt="logo"
             className="mr-4"
           />
           <a

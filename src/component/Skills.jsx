@@ -1,9 +1,7 @@
-import { RiReactjsFill } from "react-icons/ri";
-import { FaJava } from "react-icons/fa6";
-import { SiJavascript } from "react-icons/si";
-import { SiHtml5 } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa6";
-import { RiTailwindCssFill } from "react-icons/ri";
+// Import icons from dedicated entry points to avoid duplicate module imports
+import { RiReactjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { FaJava, FaNodeJs } from "react-icons/fa6";
+import { SiJavascript, SiHtml5 } from "react-icons/si";
 import {motion} from 'framer-motion';
 
 const iconvariants = (duration) => ({
@@ -28,8 +26,8 @@ export default function Skills(){
                 variants={iconvariants(2.5)}
                 animate="animate"
                 initial="initial"
-                className="rounded-2xl border-4 p-6 border-neutral-300 dark:border-neutral-800 bg-neutral-100 dark:bg-transparent">
-                    <FaJava className="text-6xl text-neutral-800 dark:text-white" />
+                className="rounded-2xl border-neutral-800 border-4 p-6">
+                    <FaJava className="text-6xl text-white" />
                 </motion.div>
                 <motion.div variants={iconvariants(3)}
                 animate="animate"
@@ -39,25 +37,25 @@ export default function Skills(){
                 <motion.div variants={iconvariants(3.9)}
                 animate="animate"
                 initial="initial"
-                 className="rounded-2xl border-4 p-6 border-neutral-300 dark:border-neutral-800 bg-neutral-100 dark:bg-transparent">
+                 className="rounded-2xl border-neutral-800 border-4 p-6">
                     <SiJavascript className="text-6xl text-yellow-300" />
                 </motion.div>
                 <motion.div
                 variants={iconvariants(7)}
                 animate="animate"
-                initial="initial" className="rounded-2xl border-4 p-6 border-neutral-300 dark:border-neutral-800 bg-neutral-100 dark:bg-transparent">
+                initial="initial" className="rounded-2xl border-neutral-800 border-4 p-6">
                     <RiTailwindCssFill className="text-6xl text-blue-600" />
                 </motion.div>
                 <motion.div
                 variants={iconvariants(5)}
                 animate="animate"
-                initial="initial" className="rounded-2xl border-4 p-6 border-neutral-300 dark:border-neutral-800 bg-neutral-100 dark:bg-transparent">
+                initial="initial" className="rounded-2xl border-neutral-800 border-4 p-6">
                     <RiReactjsFill className="text-6xl text-cyan-500" />
                 </motion.div>
                 <motion.div 
                 variants={iconvariants(3)}
                 animate="animate"
-                initial="initial" className="rounded-2xl border-4 p-6 border-neutral-300 dark:border-neutral-800 bg-neutral-100 dark:bg-transparent">
+                initial="initial" className="rounded-2xl border-neutral-800 border-4 p-6">
                     <FaNodeJs className="text-6xl text-green-500" />
                 </motion.div>
                 </motion.div>

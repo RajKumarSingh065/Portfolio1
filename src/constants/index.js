@@ -1,7 +1,11 @@
-import React from 'react';
+// Import project images using correct relative paths.
+// This file is located at src/constants/index.js, so assets are in ../assets/*
 import portfolio from "../assets/portfolio.jpg";
 import IoT from "../assets/IoT.jpg";
+import secure from "../assets/api.jpeg";
+import malware from "../assets/Malware.jpg";
 import Security from "../assets/PasswordSecurity.jpeg";
+import studymate from "../assets/studymate.jpeg";
   
 export const contact = {
     contact : "7903689873",
@@ -21,7 +25,7 @@ export const PROJECTS = [
     {
         title:"Secure API Gateway",
         // Placeholder image until a dedicated asset is added
-        image:portfolio,
+        image:secure,
         description:"A secure API gateway that provides authentication and authorization for APIs.",
         skills:["Python","Bash","Docker","Kong Gateway","JWT"],
         domains:["Security","Backend"],
@@ -30,7 +34,7 @@ export const PROJECTS = [
     {
         title:"Polymorphic Malware Simulator",
         // Placeholder image until a dedicated asset is added
-        image:portfolio,
+        image:malware,
         description:"A tool that simulates polymorphic malware, allowing users to test and analyze the behavior of such malware.",
         skills:["Rust","Bash","YAML","Docker"],
         domains:["Security","Research"],
@@ -39,7 +43,7 @@ export const PROJECTS = [
     {
         title:"CU StudyMate",
         // Placeholder image until a dedicated asset is added
-        image:portfolio,
+        image:studymate,
         description:"A platform for students to access notes",
         skills:["Kotlin","XML","Firebase","Android Studio"],
         domains:["Mobile"],
