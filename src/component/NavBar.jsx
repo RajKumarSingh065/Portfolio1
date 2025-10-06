@@ -1,6 +1,7 @@
 import React from "react";
 import { FaLinkedin, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
 import logo from "../assets/reshot-icon-gazelle.svg";
+import { RESUME } from "../constants/index";
 
 export default function NavBar() {
   return (
@@ -54,6 +55,16 @@ export default function NavBar() {
           >
             CONTACT
           </a>
+          {RESUME?.driveFileId ? (
+            <a
+              href={`https://drive.google.com/uc?export=download&id=${RESUME.driveFileId}`}
+              className="rounded-md px-4 py-2 text-sm font-semibold text-white bg-purple-600 hover:bg-purple-500 border border-purple-500"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume
+            </a>
+          ) : null}
         </nav>
         <div className="flex items-center space-x-4 text-xl">
           <a

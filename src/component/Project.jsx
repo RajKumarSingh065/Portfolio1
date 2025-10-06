@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useEffect, useCallback } from 'react';
 import { PROJECTS } from '../constants/index';
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -11,6 +11,41 @@ export default function Project() {
   }, []);
 
   const [active, setActive] = useState('All');
+
+  // Persist selected domain filter in localStorage
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('activeDomain');
+      if (saved && (saved === 'All' || domains.includes(saved))) {
+        setActive(saved);
+      }
+    } catch (_) {
+      // ignore storage errors (e.g., private mode)
+    }
+  }, [domains]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('activeDomain', active);
+    } catch (_) {
+      // ignore storage errors
+    }
+  }, [active]);
+
+  // Lightbox state for image preview
+  const [lightbox, setLightbox] = useState({ open: false, src: '', alt: '' });
+  const openLightbox = useCallback((src, alt) => setLightbox({ open: true, src, alt }), []);
+  const closeLightbox = useCallback(() => setLightbox({ open: false, src: '', alt: '' }), []);
+
+  // Close on Escape
+  useEffect(() => {
+    if (!lightbox.open) return;
+    const onKey = (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [lightbox.open, closeLightbox]);
 
   const filtered = useMemo(() => {
     if (active === 'All') return PROJECTS;
@@ -81,7 +116,10 @@ export default function Project() {
                   width={200} 
                   height={200} 
                   loading="lazy"
-                  className="mb-6 rounded-lg border" 
+                  className="mb-6 rounded-lg border cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400" 
+                  onClick={() => openLightbox(project.image, project.title)}
+                  onKeyDown={(e) => { if (e.key === 'Enter') openLightbox(project.image, project.title); }}
+                  tabIndex={0}
                 />
               </motion.div>
               <motion.div
@@ -141,6 +179,32 @@ export default function Project() {
           </AnimatePresence>
         </div>
       </div>
+      {/* Lightbox overlay */}
+      <AnimatePresence>
+        {lightbox.open && (
+          <motion.div
+            role="dialog"
+            aria-modal="true"
+            aria-label={`Image preview of ${lightbox.alt}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+            onClick={closeLightbox}
+          >
+            <motion.img
+              src={lightbox.src}
+              alt={lightbox.alt}
+              initial={{ scale: 0.96 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.98 }}
+              transition={{ type: 'spring', stiffness: 220, damping: 22 }}
+              className="max-h-[85vh] max-w-[90vw] rounded-lg border border-neutral-700 shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
