@@ -2,9 +2,6 @@ import React from 'react';
 import portfolio from "../assets/portfolio.jpg";
 import IoT from "../assets/IoT.jpg";
 import Security from "../assets/PasswordSecurity.jpeg";
-import Malware from "../assets/Malware.jpg";
-import api from "../assets/api.jpeg";
-import studymate from "../assets/studymate.jpeg";
   
 export const contact = {
     contact : "7903689873",
@@ -17,28 +14,35 @@ export const PROJECTS = [
         image:portfolio,
         description:"A personal portfolio website",
         skills:["HTML","Tailwindcss","React","Nodejs"],
+        domains:["Web"],
         githubLink: "https://github.com/RajKumarSingh065/Portfolio1",
         liveLink: "https://therajkumarsingh.netlify.app"
     },
     {
         title:"Secure API Gateway",
-        image:api,
+        // Placeholder image until a dedicated asset is added
+        image:portfolio,
         description:"A secure API gateway that provides authentication and authorization for APIs.",
         skills:["Python","Bash","Docker","Kong Gateway","JWT"],
+        domains:["Security","Backend"],
         githubLink: "https://github.com/RajKumarSingh065/secure-api-gateway", 
     },
     {
         title:"Polymorphic Malware Simulator",
-        image:Malware,
+        // Placeholder image until a dedicated asset is added
+        image:portfolio,
         description:"A tool that simulates polymorphic malware, allowing users to test and analyze the behavior of such malware.",
         skills:["Rust","Bash","YAML","Docker"],
+        domains:["Security","Research"],
         githubLink: "https://github.com/RajKumarSingh065/polymorphic-malware", 
     },
     {
         title:"CU StudyMate",
-        image:studymate,
+        // Placeholder image until a dedicated asset is added
+        image:portfolio,
         description:"A platform for students to access notes",
         skills:["Kotlin","XML","Firebase","Android Studio"],
+        domains:["Mobile"],
         githubLink: "https://github.com/RajKumarSingh065/CU-StudyMate", 
     },
     {
@@ -46,6 +50,7 @@ export const PROJECTS = [
         image:IoT,
         description:"A tool that analyzes and secures Internet of Things (IoT) devices within a network, identifying vulnerabilities and providing recommendations for improving security.",
         skills:["Python","Django","Machine Learning"],
+        domains:["Security"],
         githubLink: "https://github.com/RajKumarSingh065/iot-security-analyzer",
     },
     {
@@ -53,6 +58,7 @@ export const PROJECTS = [
         image:Security,
         description:"A tool that assesses the strength of passwords, providing recommendations for improving security.",
         skills:["Python","Flask","HTML","Tailwindcss","React"],
+        domains:["Security","Web"],
         githubLink: "https://github.com/RajKumarSingh065/Password-Score",
     }
 ];
