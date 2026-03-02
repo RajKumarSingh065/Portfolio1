@@ -1,8 +1,8 @@
 <div align="center">
 
-# Raj Kumar Singh — Portfolio
+# Raj Kumar Singh — Cybersecurity Portfolio
 
-A fast, responsive developer portfolio built with React, Vite, and Tailwind CSS. It features smooth animations, full-screen section navigation, and a projects grid with GitHub/live links.
+A fast, responsive portfolio showcasing my work as a cybersecurity professional and full-stack developer. Built with React, Vite, and Tailwind CSS, the site features smooth animations, full-screen section navigation, and a projects grid with GitHub/live links to security‑focused tools and applications.
 
 </div>
 
@@ -14,8 +14,8 @@ A fast, responsive developer portfolio built with React, Vite, and Tailwind CSS.
 - Responsive design powered by Tailwind CSS
 - Smooth animations with Framer Motion
 - Full-screen sections with scroll snap behavior
-- Projects section with images, tech stack chips, and GitHub/Live links
-- Component-driven structure: Hero, About, Skills, Projects, Contact
+- Security‑oriented projects section showcasing cybersecurity tools and research
+- Component-driven structure: Hero, About, Skills, Projects, SocialProof, Contact
 
 ## 🧰 Tech Stack
 

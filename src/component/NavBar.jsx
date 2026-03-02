@@ -22,6 +22,9 @@ export default function NavBar() {
             <span className="ml-3 text-lg font-sans-serif text-white">
               Raj Kumar Singh
             </span>
+            <span className="ml-2 text-sm text-gray-300">
+              Cybersecurity Professional
+            </span>
           </a>
         </div>
         <nav className="hidden md:flex md:space-x-4">

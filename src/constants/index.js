@@ -77,12 +77,13 @@ export const SOCIAL = {
 };
 
 
-// Resume configuration: set your Google Drive file ID here.
-// Make sure the Drive file is shared with "Anyone with the link".
+// Resume configuration: set your Google Drive **file ID only** here (not the full URL).
+// The file must be shared with "Anyone with the link" so the download works for visitors.
 // Example share link: https://drive.google.com/file/d/<FILE_ID>/view
-// Download URL format used in NavBar: https://drive.google.com/uc?export=download&id=<FILE_ID>
+// Insert just the `<FILE_ID>` below (e.g. "1dx3TxHvmDDo_oUEJOAGF1W0hS44uYTlm").
+// NavBar constructs download URL using: https://drive.google.com/uc?export=download&id=<FILE_ID>
 export const RESUME = {
-    driveFileId: "https://drive.google.com/file/d/1G03Lghm7Fl6wi-bcY0gQSMrjpNFKDmct/view?usp=sharing", // TODO: paste your Google Drive FILE_ID
+    driveFileId: "1dx3TxHvmDDo_oUEJOAGF1W0hS44uYTlm",
 };
 
 

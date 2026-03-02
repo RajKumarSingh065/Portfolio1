@@ -85,7 +85,7 @@ export default function Contact() {
                             id="message"
                             rows={5}
                             className="w-full rounded-md bg-neutral-900 border border-neutral-800 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                            placeholder="How can I help?"
+                            placeholder="Questions about cybersecurity, development, or collaborations?"
                             {...register('message')}
                         />
                         {errors.message && <p className="text-red-400 text-sm mt-1">{errors.message.message}</p>}
