@@ -1,89 +1,123 @@
-// Import project images using correct relative paths.
-// This file is located at src/constants/index.js, so assets are in ../assets/*
-import portfolio from "../assets/portfolio.jpg";
-import IoT from "../assets/IoT.jpg";
-import secure from "../assets/api.jpeg";
-import malware from "../assets/Malware.jpg";
-import Security from "../assets/PasswordSecurity.jpeg";
-import studymate from "../assets/studymate.jpeg";
-  
 export const contact = {
-    contact : "7903689873",
-    email: "29rajkumarsingh@gmail.com",
-    };
+  phone: "+91 7903689873",
+  email: "29rajkumarsingh@gmail.com",
+};
 
 export const PROJECTS = [
-    {
-        title:"Portfolio",
-        image:portfolio,
-        description:"A personal portfolio website",
-        skills:["HTML","Tailwindcss","React","Nodejs"],
-        domains:["Web"],
-        githubLink: "https://github.com/RajKumarSingh065/Portfolio1",
-        liveLink: "https://therajkumarsingh.netlify.app"
-    },
-    {
-        title:"Secure API Gateway",
-        // Placeholder image until a dedicated asset is added
-        image:secure,
-        description:"A secure API gateway that provides authentication and authorization for APIs.",
-        skills:["Python","Bash","Docker","Kong Gateway","JWT"],
-        domains:["Security","Backend"],
-        githubLink: "https://github.com/RajKumarSingh065/secure-api-gateway", 
-    },
-    {
-        title:"Polymorphic Malware Simulator",
-        // Placeholder image until a dedicated asset is added
-        image:malware,
-        description:"A tool that simulates polymorphic malware, allowing users to test and analyze the behavior of such malware.",
-        skills:["Rust","Bash","YAML","Docker"],
-        domains:["Security","Research"],
-        githubLink: "https://github.com/RajKumarSingh065/polymorphic-malware", 
-    },
-    {
-        title:"CU StudyMate",
-        // Placeholder image until a dedicated asset is added
-        image:studymate,
-        description:"A platform for students to access notes",
-        skills:["Kotlin","XML","Firebase","Android Studio"],
-        domains:["Mobile"],
-        githubLink: "https://github.com/RajKumarSingh065/CU-StudyMate", 
-    },
-    {
-        title:"IoT Device Security Analyzer",
-        image:IoT,
-        description:"A tool that analyzes and secures Internet of Things (IoT) devices within a network, identifying vulnerabilities and providing recommendations for improving security.",
-        skills:["Python","Django","Machine Learning"],
-        domains:["Security"],
-        githubLink: "https://github.com/RajKumarSingh065/iot-security-analyzer",
-    },
-    {
-        title:"Password Strength Assessment",
-        image:Security,
-        description:"A tool that assesses the strength of passwords, providing recommendations for improving security.",
-        skills:["Python","Flask","HTML","Tailwindcss","React"],
-        domains:["Security","Web"],
-        githubLink: "https://github.com/RajKumarSingh065/Password-Score",
-    }
+  {
+    title: "Enterprise SOC & Incident Response Lab",
+    symbol: "Security Operations Lab",
+    stack: ["Wazuh SIEM", "Docker Compose", "Sysmon", "VirusTotal API", "MITRE ATT&CK"],
+    description:
+      "Architected a containerized Wazuh SIEM lab, automated Active Response workflows under 5 seconds, integrated IOC enrichment, and performed endpoint monitoring with Sysmon agents.",
+    githubLink:"https://github.com/RajKumarSingh065/Enterprise-SOC-Simulation-Lab",
+  },
+  {
+    title: "Java Banking System",
+    symbol: "Secure Java Application",
+    stack: ["Java", "Microservices", "RBAC", "Concurrency", "Database Locking"],
+    description:
+      "Designed a Java-based banking system with modular microservices, secure role-based authentication, and synchronized transaction handling to prevent race conditions.",
+      githubLink: "https://github.com/RajKumarSingh065/Bank-System",
+  },
+  {
+    title: "Polymorphic Malware Simulation & Defensive Research",
+    symbol: "Defensive Security Research",
+    stack: ["Rust", "AES-256", "GUI", "Malware Analysis", "Defensive Research"],
+    description:
+      "Built a Rust-based malware simulator that visualizes mutation events and behavioral logs, researching evasion techniques to improve defensive detection workflows.",
+    githubLink: "https://github.com/RajKumarSingh065/Polymorphic-Malware",
+  },
+  {
+    title: "Secure Gateway API",
+    symbol: "Node.js API Gateway",
+    stack: ["Node.js", "Express", "JWT Authentication", "Rate Limiting", "Input Validation"],
+    description:
+      "Developed a secure API gateway with Node.js and Express, implementing JWT authentication, rate limiting, and input validation to protect backend services from common web vulnerabilities.",
+    githubLink: "https://github.com/RajKumarSingh065/secure-api-gateway",
+  },
+  {
+    title:"IOT Security Analyser",
+    symbol:"python iot_analyzer.py",
+    stack: ["Python", "IoT Protocols", "Vulnerability Assessment", "Network Traffic Analysis"],
+    description:
+      "Created a Python-based IoT security analyzer that assesses vulnerabilities in common IoT protocols, performs network traffic analysis, and generates actionable reports for improving device security.",
+    githubLink: "https://github.com/RajKumarSingh065/IOT-Device-Security-Analyzer"
+  },
 ];
 
-// Social usernames/config used by SocialProof and Contact sections
-// Social usernames/config used by SocialProof
+export const SKILL_MODULES = [
+  {
+    title: "Programming & Development",
+    tools: ["Java", "KQL", "Shell Scripting", "HTML/CSS"],
+  },
+  {
+    title: "Incident Response",
+    tools: ["Alert Triage", "Log Analysis", "Threat Detection", "IOC Enrichment", "Root Cause Analysis"],
+  },
+  {
+    title: "Security Tools",
+    tools: ["Wazuh SIEM", "Splunk", "Wireshark", "Burp Suite", "Metasploit", "Sysmon"],
+  },
+  {
+    title: "Security Architecture",
+    tools: ["IAM", "RBAC", "Infrastructure Hardening", "Access Governance", "OWASP", "Malware Analysis"],
+  },
+  {
+    title: "Systems & Networking",
+    tools: ["Linux", "Windows Event Logging", "TCP/IP", "Packet Analysis", "IDS/IPS", "Endpoint Monitoring"],
+  },
+];
+
+export const EXPERIENCE = [
+  {
+    period: "Mar 2026 - Present",
+    title: "Security Analyst Intern",
+    organization: "SilicaSecure Pvt Ltd.",
+    detail:
+      "Execute threat hunting and vulnerability assessments across client environments, coordinating remediation for critical CVEs with an average patch-to-close time under 48 hours.",
+    type: "Experience",
+  },
+  {
+    period: "Mar 2026 - Present",
+    title: "Privacy & Infrastructure Safeguards",
+    organization: "SilicaSecure Pvt Ltd.",
+    detail:
+      "Implemented and audited encryption, anonymization, and role-based access controls across client infrastructure aligned with DPDP Act Section 8 obligations.",
+    type: "Compliance",
+  },
+  {
+    period: "Jan 2025 - Jun 2025",
+    title: "Polymorphic Malware Research",
+    organization: "Defensive Research Project",
+    detail:
+      "Researched and documented novel evasion techniques while building tooling to visualize mutation events and behavioral logs for malware analysis.",
+    type: "Research",
+  },
+];
+
+export const CERTIFICATIONS = [
+  "ISO/IEC 27001:2022 - Skillfront",
+  "Microsoft Certified Azure Fundamentals - Microsoft",
+  "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional - Oracle",
+  "Google Cybersecurity Professional Certificate - Google",
+];
+
+export const EDUCATION = {
+  degree: "Bachelor of Engineering in Computer Science (Information Security)",
+  school: "Chandigarh University",
+  location: "Mohali",
+  period: "Sep 2022 - Present",
+  gpa: "7.5",
+};
+
 export const SOCIAL = {
-    github: "RajKumarSingh065",
-    leetcode: "rajkumar_01",
-    hackerrank: "29rajkumarsingh",
-    tryhackme: "Dark.Knight065",
+  github: "RajKumarSingh065",
+  linkedin: "rajkumarsingh-in",
+  email: "29rajkumarsingh@gmail.com",
 };
 
-
-// Resume configuration: set your Google Drive **file ID only** here (not the full URL).
-// The file must be shared with "Anyone with the link" so the download works for visitors.
-// Example share link: https://drive.google.com/file/d/<FILE_ID>/view
-// Insert just the `<FILE_ID>` below (e.g. "1dx3TxHvmDDo_oUEJOAGF1W0hS44uYTlm").
-// NavBar constructs download URL using: https://drive.google.com/uc?export=download&id=<FILE_ID>
 export const RESUME = {
-    driveFileId: "1dx3TxHvmDDo_oUEJOAGF1W0hS44uYTlm",
+  driveFileId: "1dx3TxHvmDDo_oUEJOAGF1W0hS44uYTlm",
+  url: "/Raj-kumar-singh-resume.pdf",
 };
-
-

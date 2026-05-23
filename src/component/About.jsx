@@ -1,39 +1,63 @@
-import React from "react";
-import image1 from "../assets/Profile.jpeg";
+import { motion } from "framer-motion";
 
 export default function About() {
-    return (
-        <section id="about" className="min-h-screen flex items-center justify-center px-4 md:px-8">
-            <div className="w-full max-w-6xl mx-auto border-b border-neutral-900 pb-8">
-                <h1 className="text-4xl font-semibold text-center mb-12">About Me</h1>
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                    {/* Image column */}
-                    <div className="lg:col-span-5">
-                        <div className="max-w-md mx-auto rounded-xl overflow-hidden shadow-2xl shadow-blue-500/20">
-                            <img
-                                src={image1}
-                                alt="Portrait of Raj Kumar Singh"
-                                className="w-full h-auto object-cover"
-                            />
-                        </div>
-                    </div>
+  return (
+    <section id="about" className="section-shell">
+      <div className="section-kicker">01 / About</div>
+      <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+        <motion.article
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={{ duration: 0.6 }}
+          className="glass-panel p-7 sm:p-9"
+        >
+          <h2 className="section-heading">Security analyst with builder instincts.</h2>
+          <p className="mt-6 text-base leading-8 text-zinc-300">
+            I am a cybersecurity student and Security Analyst Intern with a foundation in secure software
+            development, infrastructure defense, SIEM deployment, threat intelligence automation, and vulnerability
+            assessment. My work connects offensive testing with defensive remediation, with a growing focus on
+            blockchain security and application hardening.
+          </p>
+          <div className="mt-8 grid gap-3 sm:grid-cols-3">
+            {["Threat Hunting", "SIEM Operations", "48h CVE Closure"].map((item) => (
+              <div key={item} className="border border-white/10 bg-white/[0.03] p-4">
+                <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-[#7CFF00]">capability</span>
+                <p className="mt-2 text-sm font-semibold text-white">{item}</p>
+              </div>
+            ))}
+          </div>
+        </motion.article>
 
-                    {/* Text column */}
-                    <div className="lg:col-span-7">
-                        <div className="space-y-6 text-neutral-300 ">
-                            <p className="text-lg leading-relaxed ">
-                                I’m a cybersecurity-focused full-stack developer with a passion for building secure, scalable, and high-performance web applications. My work bridges the gap between software engineering and cybersecurity, ensuring every project I build is hardened against modern threats from the ground up.
-                            </p>
-                            <p className="text-lg leading-relaxed">
-                                With hands-on experience in technologies like React, Node.js, and MongoDB, I create seamless and responsive user interfaces backed by secure, well-architected APIs and data layers. Whether it’s implementing secure authentication, designing resilient backend systems, or developing tools that simulate real-world cyber threats, I approach every project with a security-first mindset.
-                            </p>
-                            <p className="text-lg leading-relaxed">
-                                My dual expertise enables me to deliver web solutions that not only function beautifully but also stand up to rigorous security scrutiny—whether for production systems or cybersecurity research environments.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        <motion.aside
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={{ delay: 0.12, duration: 0.6 }}
+          className="terminal-panel"
+        >
+          <div className="terminal-bar">
+            <span />
+            <span />
+            <span />
+            <p>mission.txt</p>
+          </div>
+          <div className="space-y-5 p-6 font-mono text-sm leading-7 text-zinc-300">
+            <p><span className="text-[#7CFF00]">$</span> cat mission.txt</p>
+            <p>
+              Deploy defensive telemetry. Hunt for risky behavior. Enrich indicators. Close critical exposure
+              quickly. Build secure software with access control, privacy safeguards, and hardened infrastructure.
+            </p>
+            <p><span className="text-[#7CFF00]">$</span> status --profile</p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <code>identity: security_analyst</code>
+              <code>mode: threat_hunting</code>
+              <code>stack: wazuh/splunk/sysmon</code>
+              <code>focus: app_hardening</code>
             </div>
-        </section>
-    );
+          </div>
+        </motion.aside>
+      </div>
+    </section>
+  );
 }

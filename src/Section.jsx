@@ -1,5 +1,6 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
+import PropTypes from "prop-types";
 import useParallax from "./useParallax";
 
 function Section({ title, content }) {
@@ -16,5 +17,10 @@ function Section({ title, content }) {
     </section>
   );
 }
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+};
 
 export default Section;

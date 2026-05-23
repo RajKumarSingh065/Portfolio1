@@ -1,84 +1,57 @@
-// Import icons from dedicated entry points to avoid duplicate module imports
-import { RiReactjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { FaJava, FaNodeJs } from "react-icons/fa6";
-import { FaShieldAlt, FaLock, FaNetworkWired } from "react-icons/fa";
-import { SiJavascript, SiHtml5 } from "react-icons/si";
-import {motion} from 'framer-motion';
+import { motion } from "framer-motion";
+import { FiCpu, FiDatabase, FiEye, FiLock, FiServer, FiZap } from "react-icons/fi";
+import { SKILL_MODULES } from "../constants/index";
 
-const iconvariants = (duration) => ({
-    initial: { y:10 },
-    animate: { y:[10,-10], transition: {duration: duration, ease:"linear", repeat:Infinity, repeatType:"reverse"} }
-});
+const icons = [FiLock, FiEye, FiZap, FiDatabase, FiCpu, FiServer];
 
-export default function Skills(){
-    return(
-        <section id="skills" className="h-screen flex items-center justify-center">
-        <div className="w-full h-full flex flex-col justify-center">
-            <motion.h1 
-            whileInView={{opacity:1, y:0}}
-            initial={{opacity:0, y:-100}}
-            transition={{duration:1.5}} className="mb-16 text-center text-4xl">Tech & Security Skills</motion.h1>
-            <motion.div
-            whileInView={{opacity:1, x:0}}
-            initial={{opacity:0, x:-100}}
-            transition={{duration:1.5}}
-             className="flex flex-wrap items-center justify-center gap-8 px-4">
-                <motion.div 
-                variants={iconvariants(2.5)}
-                animate="animate"
-                initial="initial"
-                className="rounded-2xl border-neutral-800 border-4 p-6">
-                    <FaJava className="text-6xl text-white" />
-                </motion.div>
-                <motion.div variants={iconvariants(3)}
-                animate="animate"
-                initial="initial"
-                 className="rounded-2xl border-4 p-6 border-neutral-300 dark:border-neutral-800 bg-neutral-100 dark:bg-transparent">
-                    <SiHtml5 className="text-6xl text-red-500 bg-white" /></motion.div>
-                <motion.div variants={iconvariants(3.9)}
-                animate="animate"
-                initial="initial"
-                 className="rounded-2xl border-neutral-800 border-4 p-6">
-                    <SiJavascript className="text-6xl text-yellow-300" />
-                </motion.div>
-                <motion.div
-                variants={iconvariants(7)}
-                animate="animate"
-                initial="initial" className="rounded-2xl border-neutral-800 border-4 p-6">
-                    <RiTailwindCssFill className="text-6xl text-blue-600" />
-                </motion.div>
-                <motion.div
-                variants={iconvariants(5)}
-                animate="animate"
-                initial="initial" className="rounded-2xl border-neutral-800 border-4 p-6">
-                    <RiReactjsFill className="text-6xl text-cyan-500" />
-                </motion.div>
-                <motion.div 
-                variants={iconvariants(3)}
-                animate="animate"
-                initial="initial" className="rounded-2xl border-neutral-800 border-4 p-6">
-                    <FaNodeJs className="text-6xl text-green-500" />
-                </motion.div>
-                {/* security/tooling icons */}
-                <motion.div 
-                variants={iconvariants(4)}
-                animate="animate"
-                initial="initial" className="rounded-2xl border-orange-500 border-4 p-6">
-                    <FaShieldAlt className="text-6xl text-orange-400" />
-                </motion.div>
-                <motion.div 
-                variants={iconvariants(4.5)}
-                animate="animate"
-                initial="initial" className="rounded-2xl border-red-500 border-4 p-6">
-                    <FaLock className="text-6xl text-red-400" />
-                </motion.div>
-                <motion.div 
-                variants={iconvariants(5)}
-                animate="animate"
-                initial="initial" className="rounded-2xl border-blue-500 border-4 p-6">
-                    <FaNetworkWired className="text-6xl text-blue-400" />
-                </motion.div>
-                </motion.div>
+export default function Skills() {
+  return (
+    <section id="skills" className="section-shell">
+      <div className="section-kicker">03 / Skills</div>
+      <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+        <div>
+          <h2 className="section-heading">Capability modules, not decorative meters.</h2>
+          <p className="mt-6 max-w-lg text-base leading-8 text-zinc-400">
+            A practical defensive stack organized around alert triage, log analysis, vulnerability assessment,
+            IAM controls, endpoint monitoring, secure development, and network visibility.
+          </p>
         </div>
-    </section>);
+
+        <div className="grid gap-3 sm:grid-cols-2">
+          {SKILL_MODULES.map((skill, index) => {
+            const Icon = icons[index % icons.length];
+            return (
+              <motion.div
+                key={skill.title}
+                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: 24 }}
+                viewport={{ once: true, amount: 0.25 }}
+                transition={{ delay: index * 0.04, duration: 0.45 }}
+                className="capability-panel"
+              >
+                <div className="flex items-center gap-4">
+                  <span className="grid h-10 w-10 place-items-center border border-[#7CFF00]/25 bg-black/40 text-[#7CFF00]">
+                    <Icon />
+                  </span>
+                  <div>
+                    <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-zinc-500">
+                      module {String(index + 1).padStart(2, "0")}
+                    </p>
+                    <h3 className="mt-1 text-base font-semibold text-white">{skill.title}</h3>
+                  </div>
+                </div>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {skill.tools.map((tool) => (
+                    <span key={`${skill.title}-${tool}`} className="tech-chip">
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 }
