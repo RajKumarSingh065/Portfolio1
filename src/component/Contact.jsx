@@ -54,13 +54,13 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section-shell pb-24">
-      <div className="section-kicker">05 / Contact</div>
+      <div className="section-kicker">Contact</div>
       <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
-          <h2 className="section-heading">Establish Secure Connection<span className="cursor-blink">_</span></h2>
-          <p className="mt-6 max-w-lg text-base leading-8 text-zinc-400">
-            Open a channel for SOC workflows, vulnerability assessment, threat hunting, secure development, or
-            application hardening.
+          <h2 className="section-heading">Let&apos;s work together</h2>
+          <p className="mt-6 max-w-lg text-base leading-8 text-[#8E9BAD]">
+            I&apos;m open to internships, security analyst roles, and collaboration on SOC, incident response,
+            and secure development projects. Tell me what you&apos;re working on.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a className="social-link" href={`https://github.com/${SOCIAL.github}`} target="_blank" rel="noopener noreferrer">
@@ -78,38 +78,34 @@ export default function Contact() {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="terminal-panel p-6">
-          <div className="terminal-bar -mx-6 -mt-6 mb-6">
-            <span />
-            <span />
-            <span />
-            <p>secure-message.sh</p>
-          </div>
+        <form onSubmit={handleSubmit(onSubmit)} className="glass-panel p-6 sm:p-8">
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="field-label">
-              <span>identity</span>
+              <span>Name</span>
               <input placeholder="Your name" {...register("name")} />
               {errors.name && <small>{errors.name.message}</small>}
             </label>
             <label className="field-label">
-              <span>return address</span>
+              <span>Email</span>
               <input type="email" placeholder="you@example.com" {...register("email")} />
               {errors.email && <small>{errors.email.message}</small>}
             </label>
           </div>
           <label className="field-label mt-4">
-            <span>payload</span>
-            <textarea rows={5} placeholder="Transmit message..." {...register("message")} />
+            <span>Message</span>
+            <textarea rows={5} placeholder="What are you working on?" {...register("message")} />
             {errors.message && <small>{errors.message.message}</small>}
           </label>
           <button type="submit" disabled={isSubmitting} className="neon-button mt-5 w-full justify-center">
-            {isSubmitting ? "Transmitting..." : "Transmit Secure Message"}
+            {isSubmitting ? "Sending..." : "Send message"}
             <FiSend />
           </button>
-          {status === "success" && <p className="mt-4 font-mono text-xs text-[#7CFF00]">packet delivered</p>}
+          {status === "success" && (
+            <p className="mt-4 text-sm text-[#B9C8EF]">Message sent — I&apos;ll get back to you within a day.</p>
+          )}
           {status === "error" && (
-            <p className="mt-4 font-mono text-xs text-amber-300">
-              local channel ready; configure EmailJS keys to enable live delivery
+            <p className="mt-4 text-sm text-[#E5A93D]">
+              The form couldn&apos;t send right now — email me directly at {SOCIAL.email}.
             </p>
           )}
         </form>

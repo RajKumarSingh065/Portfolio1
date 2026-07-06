@@ -27,7 +27,7 @@ export default function Project() {
               className={`${index === 0 ? "project-card md:col-span-2" : "project-card"} group`}
             >
               <div className="flex items-start justify-between gap-4">
-                <div className="grid h-12 w-12 place-items-center border border-[#7CFF00]/30 bg-[#7CFF00]/10 text-[#7CFF00]">
+                <div className="grid h-12 w-12 place-items-center border border-[#4D7CFF]/30 bg-[#4D7CFF]/10 text-[#4D7CFF]">
                   <FiActivity />
                 </div>
                 {primaryLink ? (
@@ -44,7 +44,7 @@ export default function Project() {
                   <FiArrowUpRight className="text-zinc-700" aria-hidden="true" />
                 )}
               </div>
-              <p className="mt-7 font-mono text-xs text-[#7CFF00]">{project.symbol}</p>
+              <p className="mt-7 font-mono text-xs text-[#4D7CFF]">{project.symbol}</p>
               <h3 className="mt-3 text-2xl font-black uppercase leading-none text-white">
                 {primaryLink ? (
                   <a href={primaryLink} target="_blank" rel="noopener noreferrer" className="project-title-link">
@@ -68,7 +68,7 @@ export default function Project() {
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-zinc-500 transition duration-300 hover:text-[#7CFF00]"
+                    className="text-zinc-500 transition duration-300 hover:text-[#4D7CFF]"
                   >
                     GitHub
                   </a>
@@ -78,7 +78,7 @@ export default function Project() {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-zinc-500 transition duration-300 hover:text-[#7CFF00]"
+                    className="text-zinc-500 transition duration-300 hover:text-[#4D7CFF]"
                   >
                     Live Demo
                   </a>

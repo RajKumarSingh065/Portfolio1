@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FiMenu, FiTerminal, FiX } from "react-icons/fi";
+import { FiMenu, FiShield, FiX } from "react-icons/fi";
 
 const navItems = [
   ["Home", "/"],
@@ -16,15 +16,15 @@ export default function NavBar() {
   const currentPage = navItems.find(([, href]) => href === `/${path}/`)?.[0] || "Home";
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#050505]/75 backdrop-blur-xl">
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#0E131B]/75 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <a href="/" className="group flex items-center gap-2.5" aria-label="Raj Kumar Singh home">
-          <span className="relative grid h-10 w-10 place-items-center overflow-hidden border border-[#7CFF00]/45 bg-[#7CFF00]/10 text-[#7CFF00] shadow-[0_0_30px_rgba(124,255,0,0.16)]">
-            <FiTerminal />
-            <span className="absolute inset-x-0 top-0 h-px bg-[#7CFF00] opacity-70 transition-transform duration-500 group-hover:translate-y-9" />
+          <span className="relative grid h-10 w-10 place-items-center overflow-hidden border border-[#4D7CFF]/45 bg-[#4D7CFF]/10 text-[#4D7CFF] shadow-[0_0_30px_rgba(77,124,255,0.16)]">
+            <FiShield />
+            <span className="absolute inset-x-0 top-0 h-px bg-[#4D7CFF] opacity-70 transition-transform duration-500 group-hover:translate-y-9" />
           </span>
-          <span className="font-mono text-xs uppercase tracking-[0.24em] text-[#7CFF00]">
-            RKS.OPS
+          <span className="font-mono text-xs uppercase tracking-[0.24em] text-[#4D7CFF]">
+            RAJ K. SINGH
           </span>
         </a>
 
@@ -33,7 +33,7 @@ export default function NavBar() {
             <a
               key={label}
               href={href}
-              className="rounded-sm px-3 py-2 font-mono text-xs uppercase tracking-[0.16em] text-zinc-400 transition duration-300 hover:bg-white/5 hover:text-[#7CFF00]"
+              className="rounded-sm px-3 py-2 font-mono text-xs uppercase tracking-[0.16em] text-zinc-400 transition duration-300 hover:bg-white/5 hover:text-[#4D7CFF]"
             >
               {label}
             </a>
@@ -42,14 +42,14 @@ export default function NavBar() {
 
         <a
           href="/contact/"
-          className="hidden border border-[#7CFF00]/35 bg-white/[0.03] px-4 py-2 font-mono text-xs uppercase tracking-[0.14em] text-[#7CFF00] transition duration-300 hover:border-[#7CFF00] hover:bg-[#7CFF00] hover:text-black sm:inline-flex"
+          className="hidden border border-[#4D7CFF]/35 bg-white/[0.03] px-4 py-2 font-mono text-xs uppercase tracking-[0.14em] text-[#4D7CFF] transition duration-300 hover:border-[#4D7CFF] hover:bg-[#4D7CFF] hover:text-black sm:inline-flex"
         >
           Contact
         </a>
 
         <button
           type="button"
-          className="grid h-10 w-10 place-items-center border border-[#7CFF00]/35 bg-[#7CFF00]/10 text-[#7CFF00] transition duration-300 hover:border-[#7CFF00] hover:bg-[#7CFF00] hover:text-black md:hidden"
+          className="grid h-10 w-10 place-items-center border border-[#4D7CFF]/35 bg-[#4D7CFF]/10 text-[#4D7CFF] transition duration-300 hover:border-[#4D7CFF] hover:bg-[#4D7CFF] hover:text-black md:hidden"
           aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={isOpen}
           aria-controls="mobile-navigation"
@@ -60,7 +60,7 @@ export default function NavBar() {
       </div>
       <div
         id="mobile-navigation"
-        className={`overflow-hidden border-t border-white/10 bg-[#050505]/95 transition-[max-height,opacity] duration-300 md:hidden ${
+        className={`overflow-hidden border-t border-white/10 bg-[#0E131B]/95 transition-[max-height,opacity] duration-300 md:hidden ${
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -72,7 +72,7 @@ export default function NavBar() {
               onClick={() => setIsOpen(false)}
               className={`border border-transparent px-3 py-3 font-mono text-xs uppercase tracking-[0.18em] transition duration-300 ${
                 currentPage === label
-                  ? "border-[#7CFF00]/30 bg-[#7CFF00]/10 text-[#7CFF00]"
+                  ? "border-[#4D7CFF]/30 bg-[#4D7CFF]/10 text-[#4D7CFF]"
                   : "text-zinc-400 hover:border-white/10 hover:bg-white/5 hover:text-white"
               }`}
             >
@@ -82,7 +82,7 @@ export default function NavBar() {
           <a
             href="/contact/"
             onClick={() => setIsOpen(false)}
-            className="mt-2 border border-[#7CFF00]/35 bg-white/[0.03] px-3 py-3 font-mono text-xs uppercase tracking-[0.16em] text-[#7CFF00]"
+            className="mt-2 border border-[#4D7CFF]/35 bg-white/[0.03] px-3 py-3 font-mono text-xs uppercase tracking-[0.16em] text-[#4D7CFF]"
           >
             Contact
           </a>
@@ -92,7 +92,7 @@ export default function NavBar() {
         <nav className="border-t border-white/10 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-500 md:hidden" aria-label="Breadcrumb">
           <ol className="mx-auto flex max-w-7xl items-center gap-2">
             <li>
-              <a href="/" className="text-[#7CFF00]">Home</a>
+              <a href="/" className="text-[#4D7CFF]">Home</a>
             </li>
             <li aria-hidden="true">/</li>
             <li aria-current="page" className="text-zinc-300">{currentPage}</li>
