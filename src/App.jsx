@@ -3,8 +3,8 @@ import About from "./component/About";
 import Skills from "./component/Skills";
 import Project from "./component/Project";
 import Contact from "./component/Contact";
-import Hero from "./component/Hero";
 import SocialProof from "./component/SocialProof";
+import JackHome from "./component/jack/JackHome";
 import "./index.css";
 
 function BackgroundFX() {
@@ -12,21 +12,6 @@ function BackgroundFX() {
     <div className="site-fx" aria-hidden="true">
       <div className="aurora aurora-a" />
       <div className="aurora aurora-b" />
-      <div className="grid-floor" />
-      <div className="particle-field">
-        {Array.from({ length: 6 }).map((_, index) => (
-          <span
-            key={`particle-${index}`}
-            style={{
-              "--x": `${(index * 37) % 100}%`,
-              "--delay": `${(index % 11) * -1.7}s`,
-              "--duration": `${12 + (index % 9)}s`,
-            }}
-          />
-        ))}
-      </div>
-      <div className="scanlines" />
-      <div className="noise" />
     </div>
   );
 }
@@ -34,8 +19,13 @@ function BackgroundFX() {
 export default function App() {
   const page = window.location.pathname.replace(/^\/|\/$/g, "") || "home";
 
+  // Home page uses the new Jack 3D Creator layout (no legacy BackgroundFX/NavBar)
+  if (page === "home") {
+    return <JackHome />;
+  }
+
+  // Other pages keep the original cybersecurity layout
   const pages = {
-    home: <Hero />,
     about: <About />,
     projects: <Project />,
     skills: <Skills />,
@@ -44,10 +34,10 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#050505] text-zinc-100 antialiased selection:bg-[#7CFF00] selection:text-black">
+    <div className="min-h-screen overflow-x-hidden bg-[#0E131B] text-[#ECEFF3] antialiased">
       <BackgroundFX />
       <NavBar />
-      <main>{pages[page] || pages.home}</main>
+      <main>{pages[page] || <JackHome />}</main>
     </div>
   );
 }

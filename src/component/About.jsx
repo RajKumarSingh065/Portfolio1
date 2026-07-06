@@ -22,7 +22,7 @@ export default function About() {
           <div className="mt-8 grid gap-3 sm:grid-cols-3">
             {["Threat Hunting", "SIEM Operations", "48h CVE Closure"].map((item) => (
               <div key={item} className="border border-white/10 bg-white/[0.03] p-4">
-                <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-[#7CFF00]">capability</span>
+                <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-[#4D7CFF]">capability</span>
                 <p className="mt-2 text-sm font-semibold text-white">{item}</p>
               </div>
             ))}
@@ -40,20 +40,18 @@ export default function About() {
             <span />
             <span />
             <span />
-            <p>mission.txt</p>
+            <p>Mission brief</p>
           </div>
-          <div className="space-y-5 p-6 font-mono text-sm leading-7 text-zinc-300">
-            <p><span className="text-[#7CFF00]">$</span> cat mission.txt</p>
+          <div className="space-y-5 p-6 text-sm leading-7 text-zinc-300">
             <p>
               Deploy defensive telemetry. Hunt for risky behavior. Enrich indicators. Close critical exposure
               quickly. Build secure software with access control, privacy safeguards, and hardened infrastructure.
             </p>
-            <p><span className="text-[#7CFF00]">$</span> status --profile</p>
             <div className="grid gap-3 sm:grid-cols-2">
-              <code>identity: security_analyst</code>
-              <code>mode: threat_hunting</code>
-              <code>stack: wazuh/splunk/sysmon</code>
-              <code>focus: app_hardening</code>
+              <code>Role — Security analyst</code>
+              <code>Mode — Threat hunting</code>
+              <code>Stack — Wazuh · Splunk · Sysmon</code>
+              <code>Focus — App hardening</code>
             </div>
           </div>
         </motion.aside>

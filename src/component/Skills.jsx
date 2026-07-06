@@ -30,7 +30,7 @@ export default function Skills() {
                 className="capability-panel"
               >
                 <div className="flex items-center gap-4">
-                  <span className="grid h-10 w-10 place-items-center border border-[#7CFF00]/25 bg-black/40 text-[#7CFF00]">
+                  <span className="grid h-10 w-10 place-items-center border border-[#4D7CFF]/25 bg-black/40 text-[#4D7CFF]">
                     <Icon />
                   </span>
                   <div>
