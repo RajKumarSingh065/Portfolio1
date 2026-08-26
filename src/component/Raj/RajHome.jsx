@@ -1,5 +1,4 @@
 import HeroSection from './HeroSection';
-import MarqueeSection from './MarqueeSection';
 import AboutSection from './AboutSection';
 import ServicesSection from './ServicesSection';
 import ProjectsSection from './ProjectsSection';
@@ -7,13 +6,12 @@ import Contact from '../Contact';
 
 export default function JackHome() {
   return (
-    <div style={{ overflowX: 'clip', background: '#0E131B' }} className="text-[#ECEFF3]">
+    <div style={{ overflowX: 'clip', background: "#001e2b" }} className="text-canvas">
       <HeroSection />
-      <MarqueeSection />
       <AboutSection />
       <ServicesSection />
       <ProjectsSection />
-      <div className="bg-[#0E131B] pt-10">
+      <div className="bg-brand-teal-deep pt-10">
         <Contact />
       </div>
     </div>

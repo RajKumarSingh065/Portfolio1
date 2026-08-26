@@ -30,11 +30,11 @@ export default function Skills() {
                 className="capability-panel"
               >
                 <div className="flex items-center gap-4">
-                  <span className="grid h-10 w-10 place-items-center border border-[#4D7CFF]/25 bg-black/40 text-[#4D7CFF]">
+                  <span className="grid h-10 w-10 place-items-center border border-brand-green/25 bg-canvas-dark/40 text-brand-green">
                     <Icon />
                   </span>
                   <div>
-                    <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-zinc-500">
+                    <p className="font-mono text-micro-uppercase uppercase tracking-[0.24em] text-zinc-500">
                       module {String(index + 1).padStart(2, "0")}
                     </p>
                     <h3 className="mt-1 text-base font-semibold text-white">{skill.title}</h3>

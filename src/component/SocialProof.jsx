@@ -22,7 +22,7 @@ export default function SocialProof() {
                 transition={{ delay: index * 0.1, duration: 0.45 }}
                 className="glass-panel p-6"
               >
-                {index === 0 ? <FiAward className="text-[#4D7CFF]" /> : <FiBookOpen className="text-[#4D7CFF]" />}
+                {index === 0 ? <FiAward className="text-brand-green" /> : <FiBookOpen className="text-brand-green" />}
                 <h3 className="mt-5 text-xl font-black uppercase text-white">{title}</h3>
                 <p className="mt-4 text-sm leading-7 text-zinc-400">{body}</p>
               </motion.div>
@@ -42,16 +42,16 @@ export default function SocialProof() {
             >
               <span className="timeline-dot" />
               <div className="flex flex-wrap items-center gap-3">
-                <span className="font-mono text-xs text-[#4D7CFF]">{item.period}</span>
-                <span className="border border-white/10 px-2 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-500">
+                <span className="font-mono text-caption text-brand-green">{item.period}</span>
+                <span className="border border-white/10 px-2 py-1 font-mono text-micro-uppercase uppercase tracking-[0.18em] text-zinc-500">
                   {item.type}
                 </span>
               </div>
               <h3 className="mt-3 text-2xl font-black uppercase text-white">{item.title}</h3>
-              <p className="mt-2 font-mono text-xs uppercase tracking-[0.16em] text-zinc-500">{item.organization}</p>
+              <p className="mt-2 font-mono text-caption uppercase tracking-[0.16em] text-zinc-500">{item.organization}</p>
               <p className="mt-3 text-sm leading-7 text-zinc-400">{item.detail}</p>
-              <p className="mt-5 flex items-center gap-2 font-mono text-xs text-zinc-500">
-                <FiCheckCircle className="text-[#4D7CFF]" />
+              <p className="mt-5 flex items-center gap-2 font-mono text-caption text-zinc-500">
+                <FiCheckCircle className="text-brand-green" />
                 evidence logged
               </p>
             </motion.article>

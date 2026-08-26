@@ -4,7 +4,7 @@ import Skills from "./component/Skills";
 import Project from "./component/Project";
 import Contact from "./component/Contact";
 import SocialProof from "./component/SocialProof";
-import JackHome from "./component/jack/JackHome";
+import RajHome from "./component/Raj/RajHome";
 import "./index.css";
 
 function BackgroundFX() {
@@ -21,7 +21,7 @@ export default function App() {
 
   // Home page uses the new Jack 3D Creator layout (no legacy BackgroundFX/NavBar)
   if (page === "home") {
-    return <JackHome />;
+    return <RajHome />;
   }
 
   // Other pages keep the original cybersecurity layout
@@ -34,10 +34,10 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#0E131B] text-[#ECEFF3] antialiased">
+    <div className="min-h-screen overflow-x-hidden bg-brand-teal-deep text-canvas antialiased">
       <BackgroundFX />
       <NavBar />
-      <main>{pages[page] || <JackHome />}</main>
+      <main>{pages[page] || <RajHome />}</main>
     </div>
   );
 }

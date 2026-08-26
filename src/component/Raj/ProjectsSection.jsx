@@ -36,12 +36,12 @@ function ProjectCard({ project, index, totalCards }) {
         {/* Top Row */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-5 sm:mb-7">
           <div className="min-w-0">
-            <p className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-[#8E9BAD]">
+            <p className="font-mono text-micro-uppercase uppercase tracking-[0.22em] text-steel">
               {String(index + 1).padStart(2, '0')} · {project.symbol}
             </p>
             <h3
               className="hero-heading leading-tight mt-2"
-              style={{ fontSize: 'clamp(1.4rem, 3vw, 2.6rem)', fontWeight: 700 }}
+              style={{ fontSize: "56px", fontWeight: 700 }}
             >
               {project.title}
             </h3>
@@ -52,14 +52,14 @@ function ProjectCard({ project, index, totalCards }) {
 
         {/* Description + stack */}
         <div className="grid gap-4 md:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] md:gap-10 mb-6 sm:mb-8">
-          <p className="text-[#B9C3D2] leading-relaxed text-sm sm:text-base max-w-[620px]">
+          <p className="text-muted leading-relaxed text-sm sm:text-base max-w-[620px]">
             {project.description}
           </p>
           <div className="flex flex-wrap gap-2 content-start md:justify-end">
             {project.stack.map((tech) => (
               <span
                 key={tech}
-                className="px-3 py-1 text-[0.68rem] font-mono border border-[#4D7CFF]/25 rounded-full text-[#B9C8EF] bg-[#4D7CFF]/10"
+                className="px-3 py-1 text-micro-uppercase font-mono border border-brand-green/25 rounded-full text-on-dark bg-brand-green/10"
               >
                 {tech}
               </span>
@@ -84,7 +84,7 @@ export default function ProjectsSection() {
 
   return (
     <section
-      className="bg-[#0E131B] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 relative z-10 px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32"
+      className="bg-brand-teal-deep rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 relative z-10 px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32"
       id="projects"
     >
       <div className="flex flex-col items-center mb-14 sm:mb-20 md:mb-24">
@@ -94,7 +94,7 @@ export default function ProjectsSection() {
         <FadeIn delay={0.05} y={30}>
           <h2
             className="hero-heading uppercase text-center leading-none tracking-tight"
-            style={{ fontSize: 'clamp(3rem, 12vw, 150px)' }}
+            style={{ fontSize: "56px" }}
           >
             Projects
           </h2>

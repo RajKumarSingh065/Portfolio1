@@ -21,8 +21,8 @@ function ThreatMap() {
 
   return (
     <div className="holo-panel relative mx-auto aspect-square w-full max-w-[520px] overflow-hidden">
-      <div className="absolute inset-6 border border-[#4D7CFF]/20" />
-      <div className="radar-sweep absolute inset-8 rounded-full border border-[#4D7CFF]/25" />
+      <div className="absolute inset-6 border border-brand-green/20" />
+      <div className="radar-sweep absolute inset-8 rounded-full border border-brand-green/25" />
       <svg className="absolute inset-0 h-full w-full" viewBox="0 0 100 100" role="img" aria-label="Animated cyber threat map">
         <defs>
           <filter id="glow">
@@ -58,7 +58,7 @@ function ThreatMap() {
         <path d="M50 18 L69 28 L66 52 C64 64 57 72 50 77 C43 72 36 64 34 52 L31 28 Z" className="shield-mark" />
       </svg>
 
-      <div className="absolute bottom-6 right-6 flex items-center gap-2 border border-[#4D7CFF]/30 bg-black/45 px-3 py-2 font-mono text-[10px] uppercase tracking-[0.22em] text-[#4D7CFF]">
+      <div className="absolute bottom-6 right-6 flex items-center gap-2 border border-brand-green/30 bg-canvas-dark/45 px-3 py-2 font-mono text-micro-uppercase uppercase tracking-[0.22em] text-brand-green">
         <FiShield />
         monitoring
       </div>
@@ -76,7 +76,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-4xl"
         >
-          <p className="mb-5 font-mono text-xs uppercase tracking-[0.24em] text-[#4D7CFF]">
+          <p className="mb-5 font-mono text-caption uppercase tracking-[0.24em] text-brand-green">
             Security Analyst Portfolio
           </p>
           <h1 className="brutal-heading text-5xl font-black uppercase leading-[0.94] text-white sm:text-6xl lg:text-7xl">
@@ -130,14 +130,14 @@ export default function Hero() {
 
         <article className="home-feature-panel">
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.24em] text-[#4D7CFF]">featured project</p>
+            <p className="font-mono text-caption uppercase tracking-[0.24em] text-brand-green">featured project</p>
             <h2 className="mt-3 text-2xl font-black uppercase leading-none text-white">Enterprise SOC & Incident Response Lab</h2>
             <p className="mt-4 text-sm leading-7 text-zinc-400">
               Containerized Wazuh SIEM cluster with Sysmon endpoint telemetry, automated Active Response, and
               VirusTotal IOC enrichment to reduce manual triage time by roughly 90%.
             </p>
           </div>
-          <a href="/projects/" className="mt-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.16em] text-[#4D7CFF]">
+          <a href="/projects/" className="mt-6 inline-flex items-center gap-2 font-mono text-caption uppercase tracking-[0.16em] text-brand-green">
             view project <FiArrowUpRight />
           </a>
         </article>

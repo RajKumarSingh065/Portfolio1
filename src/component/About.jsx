@@ -22,7 +22,7 @@ export default function About() {
           <div className="mt-8 grid gap-3 sm:grid-cols-3">
             {["Threat Hunting", "SIEM Operations", "48h CVE Closure"].map((item) => (
               <div key={item} className="border border-white/10 bg-white/[0.03] p-4">
-                <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-[#4D7CFF]">capability</span>
+                <span className="font-mono text-micro-uppercase uppercase tracking-[0.24em] text-brand-green">capability</span>
                 <p className="mt-2 text-sm font-semibold text-white">{item}</p>
               </div>
             ))}

@@ -58,7 +58,7 @@ export default function Contact() {
       <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
           <h2 className="section-heading">Let&apos;s work together</h2>
-          <p className="mt-6 max-w-lg text-base leading-8 text-[#8E9BAD]">
+          <p className="mt-6 max-w-lg text-base leading-8 text-steel">
             I&apos;m open to internships, security analyst roles, and collaboration on SOC, incident response,
             and secure development projects. Tell me what you&apos;re working on.
           </p>
@@ -101,10 +101,10 @@ export default function Contact() {
             <FiSend />
           </button>
           {status === "success" && (
-            <p className="mt-4 text-sm text-[#B9C8EF]">Message sent — I&apos;ll get back to you within a day.</p>
+            <p className="mt-4 text-sm text-on-dark">Message sent — I&apos;ll get back to you within a day.</p>
           )}
           {status === "error" && (
-            <p className="mt-4 text-sm text-[#E5A93D]">
+            <p className="mt-4 text-sm text-accent-orange">
               The form couldn&apos;t send right now — email me directly at {SOCIAL.email}.
             </p>
           )}

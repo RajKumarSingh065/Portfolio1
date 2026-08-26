@@ -15,7 +15,7 @@ const FACTS = [
 export default function AboutSection() {
   return (
     <section
-      className="bg-[#ECEFF3] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] relative z-10 flex items-center justify-center px-5 sm:px-8 md:px-10 py-24 sm:py-28 md:py-36"
+      className="bg-canvas rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] relative z-10 flex items-center justify-center px-5 sm:px-8 md:px-10 py-24 sm:py-28 md:py-36"
       id="about"
     >
       <div className="flex flex-col items-center">
@@ -27,7 +27,7 @@ export default function AboutSection() {
           <FadeIn delay={0.05} y={40}>
             <h2
               className="hero-heading hero-heading--ink uppercase leading-none tracking-tight text-center"
-              style={{ fontSize: 'clamp(3rem, 12vw, 150px)' }}
+              style={{ fontSize: "56px" }}
             >
               About me
             </h2>
@@ -40,8 +40,8 @@ export default function AboutSection() {
             <span className="crop-mark crop-mark--br" aria-hidden="true" />
             <AnimatedText
               text={ABOUT_TEXT}
-              className="text-[#1A222E] font-medium text-center leading-relaxed"
-              style={{ fontSize: 'clamp(1rem, 2vw, 1.3rem)' }}
+              className="text-ink font-medium text-center leading-relaxed"
+              style={{ fontSize: "56px" }}
             />
           </div>
         </div>
@@ -50,11 +50,11 @@ export default function AboutSection() {
         <div className="mt-16 sm:mt-20 grid gap-6 sm:gap-10 sm:grid-cols-3 w-full max-w-3xl">
           {FACTS.map((fact, i) => (
             <FadeIn key={fact.label} delay={0.1 + i * 0.08} y={24}>
-              <div className="text-center sm:text-left border-t border-[#1A222E]/15 pt-4">
-                <p className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-[#1A222E]/55">
+              <div className="text-center sm:text-left border-t border-ink/15 pt-4">
+                <p className="font-mono text-micro-uppercase uppercase tracking-[0.22em] text-ink/55">
                   {fact.label}
                 </p>
-                <p className="mt-2 text-sm sm:text-[0.95rem] font-medium text-[#1A222E] leading-snug">
+                <p className="mt-2 text-sm sm:text-body-md font-medium text-ink leading-snug">
                   {fact.value}
                 </p>
               </div>
